@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main class="app">
+      <header class="app-header">
+        <h1>Skycast</h1>
+        <p class="tagline">Pick a city, check the sky.</p>
+      </header>
+
+      <div class="controls">
+        <label for="city-select" class="sr-only">Choose a city</label>
+        <select id="city-select">
+          <option value=""></option>
+          <option value="new york">New York</option>
+          <option value="los angeles">Los Angeles</option>
+          <option value="chicago">Chicago</option>
+          <option value="paris">Paris</option>
+          <option value="tokyo">Tokyo</option>
+          <option value="london">London</option>
+        </select>
+        <button id="get-weather-btn" type="button">Get Weather</button>
+      </div>
+
+      <section id="weather-card" class="weather-card hidden" aria-live="polite">
+        <div class="card-top">
+          <div>
+            <h2 id="location"></h2>
+            <p id="weather-main"></p>
+          </div>
+          <img id="weather-icon" src="" alt="Weather icon" />
+        </div>
+
+        <p class="temp-big"><span id="main-temperature"></span></p>
+
+        <ul class="stats">
+          <li><span class="label">Feels like</span><span id="feels-like"></span></li>
+          <li><span class="label">Humidity</span><span id="humidity"></span></li>
+          <li><span class="label">Wind</span><span id="wind"></span></li>
+          <li><span class="label">Gusts</span><span id="wind-gust"></span></li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
